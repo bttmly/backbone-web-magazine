@@ -100,7 +100,9 @@ $ ->
           $( "body" ).attr( "data-page-type", value )
 
       start : ->
-        Backbone.history.start pushState: true
+        Backbone.history.start 
+          pushState: true
+          root: "/backbone-web-magazine/"
         $(document).on 'click', 'a:not([data-bypass])', (event) ->
           event.preventDefault()
           href = $( this ).attr( "href")

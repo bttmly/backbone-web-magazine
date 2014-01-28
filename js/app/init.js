@@ -71,9 +71,6 @@ $(function() {
     }).show();
   })();
   return (function() {
-    return App.router.start({
-      pushState: true,
-      root: "/backbone-web-magazine/"
-    });
+    return App.router.start;
   })();
 });

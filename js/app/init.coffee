@@ -66,5 +66,3 @@ $ ->
 
   do ->
     App.router.start
-      pushState: true
-      root: "/backbone-web-magazine/"
