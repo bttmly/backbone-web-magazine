@@ -7,7 +7,6 @@ $ ->
         "/backbone-web-magazine/article/:id"     : "singleArticle"
         "/backbone-web-magazine/category/:name"  : "categoryPage"
         "/backbone-web-magazine/author/:name"    : "authorPage"
-        "*"                                      : "featured"
 
       singleArticle: ( id ) ->
         id = parseInt id, 10
