@@ -1,0 +1,1 @@
+App.vent = _.extend {}, Backbone.Events

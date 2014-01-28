@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel='stylesheet', href='/css/styles.css' />
+    <!-- <link href='http://fonts.googleapis.com/css?family=Playfair+Display:400,900,400italic,900italic' rel='stylesheet' type='text/css'> -->
+    <script type="text/javascript">
+      WebFontConfig = {
+        google: { families: [ 'Playfair+Display:400,900,400italic,900italic:latin' ] }
+      };
+      (function() {
+        var wf = document.createElement('script');
+        wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
+          '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+        wf.type = 'text/javascript';
+        wf.async = 'true';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(wf, s);
+      })(); 
+    </script>  
+  </head>
+
+  <body>
+    <div class="page-wrapper">
+      <h1>Web Magazine</h1>
+      <header></header>
+      <nav>
+        <ul class="nav-links">
+          <li class="selected-section js-nav-featured"><a href="/" data-category="featured">Featured</a>
+            <div class="nav-link-dropdown nav-link-dropdown-featured">
+            </div>
+          </li>
+          <li class="js-nav-eat"><a href="/category/eat" data-category="eat">Eat</a>
+            <div class="nav-link-dropdown nav-link-dropdown-eat">
+            </div>
+          </li>
+          <li class="js-nav-drink"><a href="/category/drink">Drink</a>
+            <div class="nav-link-dropdown nav-link-dropdown-drink">
+            </div>
+          </li>
+          <li class="js-nav-listen"><a href="/category/listen" data-category="listen">Listen</a>
+            <div class="nav-link-dropdown nav-link-dropdown-listen">
+            </div>
+          </li>
+          <li class="js-nav-watch"><a href="/category/watch" data-category="watch">Watch</a>
+            <div class="nav-link-dropdown nav-link-dropdown-watch">
+            </div>
+          </li>
+          <li class="js-nav-code"><a href="/category/code" data-category="code">Code</a>
+            <div class="nav-link-dropdown nav-link-dropdown-code">
+            </div>
+          </li>
+        </ul>
+        <div class="category-hero">
+          <div class="category-banner" id="category-banner" style="background-image: url(http://rivalsons.com/wp_v1/wp-content/themes/rivalsons_theme/images/slide_3.jpg)">
+            <h2 class="category-title">Listen
+              <span class="category-title__subtitle">Bands, shows, album reviews and more</span>
+            </h2>
+          </div>
+        </div>
+      </nav>
+      <div class="main-content">
+      </div>
+    </div>
+    <!--
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.5.2/underscore-min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/underscore.string/2.3.3/underscore.string.min.js"></script>
+    <script>
+      _.mixin(_.str.exports());
+      
+    </script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/backbone.js/1.1.0/backbone-min.js"></script>
+    -->
+
+    <script src="/js/vendor/jquery.min.js"></script>
+    <script src="/js/vendor/underscore-min.js"></script>
+    <script src="/js/vendor/underscore.string.min.js"></script>
+    <script src="/js/vendor/backbone-min.js"></script>
+    <script src="/js/vendor/coffeekup.js"></script>
+    
+    <script>
+      _.mixin(_.str.exports());
+      window.App = {}
+    </script>
+
+    <script src="/js/app/utilities.js"></script>
+    <script src="/js/app/data.js"></script>
+    <script src="/js/app/templates.js"></script>
+    <script src="/js/app/vent.js"></script>
+    <script src="/js/app/classes.js"></script>
+
+    <!--
+    might need this if classes.js gets too big
+    <script src="/js/app/models.js"></script>
+    <script src="/js/app/collections.js"></script>
+    <script src="/js/app/views.js"></script>
+    -->
+
+    <script src="/js/app/router.js"></script>
+    <script src="/js/app/init.js"></script>
+
+  </body>
+</html>

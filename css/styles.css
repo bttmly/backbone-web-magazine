@@ -1,0 +1,218 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+html {
+  height: 100%;
+}
+body {
+  min-height: 125%;
+  font-family: 'Open Sans', sans-serif;
+}
+p {
+  margin: 0 0 1rem 0;
+}
+a,
+a:visited {
+  color: #098981;
+}
+a:active,
+a:visited:active {
+  color: #076e67;
+}
+img {
+  max-width: 100%;
+}
+.page-wrapper {
+  width: 90%;
+  margin: 0 auto;
+}
+.nav-links {
+  padding-left: 0;
+  list-style-type: none;
+  display: flex;
+  height: 3.5rem;
+  position: relative;
+  z-index: 200;
+}
+.nav-links li {
+  text-align: center;
+  flex: 1;
+  background: #fff;
+  border-bottom: 0.5rem solid #333;
+}
+.nav-links li > a {
+  text-decoration: underline;
+  color: #098981;
+  font-weight: bold;
+  display: block;
+  padding: 0.5rem 1rem 1rem;
+}
+.nav-links li.selected-section {
+  background: transparent;
+  border: 0.5rem solid #333;
+  border-bottom: none;
+  padding: 0;
+}
+.nav-links li.selected-section > a {
+  color: #fff;
+  text-shadow: 0 0 5px rgba(0,0,0,0.5);
+}
+.nav-links:hover li {
+  font-family: inherit;
+}
+.nav-links li:not(.selected-section) {
+  padding: 0.5rem 0.5rem 0 0.5rem;
+}
+.nav-links li:not(.selected-section):hover {
+  background: #098981;
+}
+.nav-links li:not(.selected-section):hover > a {
+  color: #fff;
+}
+.nav-links li:not(.selected-section):hover .nav-link-dropdown {
+  display: block;
+}
+.category-hero {
+  position: relative;
+  height: 16rem;
+}
+.category-banner {
+  margin-top: -4.5rem;
+  height: 16rem;
+  width: 100%;
+  opacity: 0;
+  background-size: cover;
+  background-position: center 15%;
+  position: absolute;
+  border: 0.5rem solid #333;
+  overflow: hidden;
+  transition-property: opacity;
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.2s;
+}
+.category-banner:before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(0,0,0,0.15);
+}
+.category-banner .category-title {
+  z-index: 100;
+  font-family: 'Playfair Display', sans-serif;
+  font-weight: 900;
+  font-style: italic;
+  font-size: 4rem;
+  text-align: center;
+  color: #fff;
+  margin: 0;
+  padding-top: 4rem;
+  text-shadow: 0 0 5px rgba(0,0,0,0.5);
+  position: relative;
+}
+.category-banner .category-title__subtitle {
+  display: block;
+  font-size: 1.5rem;
+  font-weight: normal;
+}
+body[data-page-type="category"] .category-banner {
+  max-height: 24rem;
+}
+.nav-link-dropdown {
+  position: absolute;
+  border: 0.5rem solid #098981;
+  top: 3rem;
+  left: 0;
+  text-align: left;
+  background: #fff;
+  min-height: 16.75rem;
+  width: 100%;
+  padding: 1rem;
+  display: none;
+}
+.nav-link-dropdown .dropdown-columns > div:first-of-type {
+  padding-left: 0;
+}
+.nav-link-dropdown .dropdown-columns > div:last-of-type {
+  padding-right: 0;
+  border-right: none;
+}
+.dropdown-columns {
+  display: flex;
+}
+.dropdown-column {
+  flex: 1;
+  padding: 1rem;
+  padding-top: 0;
+  border-right: 1px dotted #808080;
+}
+.article-snippet-image {
+  height: 0;
+  padding-bottom: 65%;
+  border: 1px solid;
+  background-size: cover;
+  background-position: center;
+}
+.dropdown-columns {
+  margin-bottom: 1rem;
+}
+.dropdown-footer {
+  background: #098981;
+  color: #fff;
+}
+.dropdown-footer a,
+.dropdown-footer a:visited {
+  color: #fff;
+}
+.dropdown-footer p {
+  text-align: center;
+  margin: 0;
+  height: 3rem;
+  line-height: 3rem;
+  cursor: pointer;
+}
+.dropdown-footer .dropdown-category {
+  font-weight: bold;
+}
+.main-content {
+  width: 40rem;
+  max-width: 100%;
+  margin: 4rem auto;
+}
+.main-content > article {
+  margin-bottom: 4rem;
+}
+.article-header {
+  display: flex;
+  margin-bottom: 2rem;
+}
+.article-header .article-image {
+  flex: 1;
+  background-position: center, 15%;
+  background-size: cover;
+  border: 1px solid #666;
+}
+.article-header .article-info {
+  flex: 1;
+  margin-right: 2rem;
+}
+.article-header .article-title {
+  margin: 0 0 1rem 0;
+}
+body[data-page-type="article"] .article-header {
+  display: block;
+}
+body[data-page-type="article"] .article-header .article-image {
+  height: 16rem;
+}
+body[data-page-type="article"] .article-header .article-info {
+  margin: 2rem 0;
+}
+body[data-page-type="article"] .article-header .article-title {
+  font-size: 3rem;
+}
