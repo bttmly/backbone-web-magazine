@@ -12,7 +12,7 @@ App.templates =
         break if i > 2
         div class: 'dropdown-column', ->
           div class: 'article-snippet-image', 'style' : "background-image: url('#{ article.image }')", ->
-          a class: 'article-link', href: "/backbone-web-magazine/article/#{ article.uid }", ->
+          a class: 'article-link', href: "article/#{ article.uid }", ->
             h2 class: 'snippet-title', -> article.title
           if article.authors.length
             p class: 'article-snippet-authors', ->
@@ -20,18 +20,18 @@ App.templates =
               for author, i in article.authors
                 span class: 'article-snippet-author', ->
                   if i is article.authors.length - 1
-                    "<a href='/backbone-web-magazine/author/#{ author }'>#{ author }</a>"
+                    "<a href='author/#{ author }'>#{ author }</a>"
                   else if i is article.authors.length - 2
-                    "<a href='/backbone-web-magazine/author/#{ author }'>#{ author }</a> and "
+                    "<a href='author/#{ author }'>#{ author }</a> and "
                   else
-                    "<a href='/backbone-web-magazine/author/#{ author }'>#{ author }</a>, "
+                    "<a href='author/#{ author }'>#{ author }</a>, "
           if article.category
             p class: 'article-snippet-tags', -> "Filed in #{ _.str.capitalize( article.category ) }"
           if article.date
             d = article.date.toString().split( ' ' )
             p class: 'article-snippet-date', -> "#{d[0]} #{d[1]} #{d[2]} #{d[3]}"
     footer class: 'dropdown-footer', ->
-      url = if data.category is "featured" then "/backbone-web-magazine/" else "/backbone-web-magazine/category/#{ data.category }"
+      url = if data.category is "featured" then "" else "category/#{ data.category }"
       a class: 'category-link', href: url, ->
         p ->
           text "Read More in "
@@ -47,18 +47,18 @@ App.templates =
     article ->
         header class: 'article-header', ->
           div class: 'article-info', ->
-            a class: 'article-link', href: "/backbone-web-magazine/article/#{ art.uid }", ->
+            a class: 'article-link', href: "article/#{ art.uid }", ->
               h2 class: 'article-title', -> art.title
             p class: 'article-authors', ->
               text 'by '
               for author, i in art.authors
                 span class: 'article-snippet-author', ->
                   if i is art.authors.length - 1
-                    "<a href='/backbone-web-magazine/author/#{ author }'>#{ author }</a>"
+                    "<a href='author/#{ author }'>#{ author }</a>"
                   else if i is art.authors.length - 2
-                    "<a href='/backbone-web-magazine/author/#{ author }'>#{ author }</a> and "
+                    "<a href='author/#{ author }'>#{ author }</a> and "
                   else
-                    "<a href='/backbone-web-magazine/author/#{ author }'>#{ author }</a>, "
+                    "<a href='author/#{ author }'>#{ author }</a>, "
             p class: 'article-date', -> 
               d = art.date.toString().split( ' ' )
               text "#{d[0]} #{d[1]} #{d[2]} #{d[3]}"

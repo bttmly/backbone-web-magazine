@@ -65,4 +65,4 @@ $ ->
     .show()
 
   do ->
-    App.router.start
+    App.router.start()
