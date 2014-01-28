@@ -3,10 +3,10 @@ $ ->
   App.router = new (Backbone.Router.extend
       
       routes:
-        "/backbone-web-magazine/"                : "featured"
-        "/backbone-web-magazine/article/:id"     : "singleArticle"
-        "/backbone-web-magazine/category/:name"  : "categoryPage"
-        "/backbone-web-magazine/author/:name"    : "authorPage"
+        "backbone-web-magazine/"                : "featured"
+        "backbone-web-magazine/article/:id"     : "singleArticle"
+        "backbone-web-magazine/category/:name"  : "categoryPage"
+        "backbone-web-magazine/author/:name"    : "authorPage"
 
       singleArticle: ( id ) ->
         id = parseInt id, 10
