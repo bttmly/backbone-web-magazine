@@ -65,4 +65,6 @@ $ ->
     .show()
 
   do ->
-    App.router.start()
+    App.router.start
+      pushState: true
+      root: "/backbone-web-magazine/"
