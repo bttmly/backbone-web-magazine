@@ -33,6 +33,13 @@ class BaseView extends Backbone.View
             callback()
           this.$el.fadeIn fadeDuration
 
+  close: -> 
+    this.unbind()
+    this.model.unbind( 'change', this.render, this )
+    this.options.parent.unbind( 'close:all', this.close, this )
+    this.remove()
+    delete this.$el
+    delete this.el
 
 class ArticleView extends BaseView
   initialize : ( options ) ->

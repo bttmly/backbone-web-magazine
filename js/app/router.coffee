@@ -9,6 +9,9 @@ $ ->
         "author/:name"    : "authorPage"
 
       singleArticle: ( id ) ->
+
+        console.log articleModel
+
         id = parseInt id, 10
         articleModel = new App.Models.ArticleModel _( App.data.articles ).findWhere
           uid: id
@@ -25,7 +28,6 @@ $ ->
         articleView.fadeRender =>
           @helpers.scrollTop( ".main-content" )
           @helpers.setPageType( "article" )
-        
 
       categoryPage: ( name ) ->
         articleCollection = new App.Collections.ArticlesCollection _( App.data.articles ).where
@@ -45,6 +47,9 @@ $ ->
           # @renderBanner( name )
           @helpers.scrollTop( "html" )
           @helpers.setPageType( "category" )
+
+          articleModel = null
+          articleView = null
 
       featured : ->
         articleCollection = new App.Collections.ArticlesCollection _( App.data.articles ).where

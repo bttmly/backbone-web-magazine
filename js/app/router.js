@@ -11,6 +11,7 @@
       singleArticle: function(id) {
         var articleModel, articleView,
           _this = this;
+        console.log(articleModel);
         id = parseInt(id, 10);
         articleModel = new App.Models.ArticleModel(_(App.data.articles).findWhere({
           uid: id
@@ -46,8 +47,11 @@
         this.banners(name).show();
         this.helpers.setTab(name);
         return articleView.fadeRender(function() {
+          var articleModel;
           _this.helpers.scrollTop("html");
-          return _this.helpers.setPageType("category");
+          _this.helpers.setPageType("category");
+          articleModel = null;
+          return articleView = null;
         });
       },
       featured: function() {
